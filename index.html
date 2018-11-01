@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel = 'stylesheet' href = 'style.css'>
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src='index.js' defer></script>
+            <script src = 'preventMismatchDT.js'></script>
+            
+    </head>
+    <body>
+        <h1> Two way data Binding Pure JS</h1>
+      <div class='inputModelCls'>
+           <label class='textLabel'>Input Strings</label>
+          <div class='inputTableModelCls'>
+                <table>
+                        <tr>
+                            <td class='labeltext'>
+                                  <label>Enter first Name </label>
+                            </td>
+                            <td class='inputBox'>
+                                <input type='text' placeholder='first Name' class = 'inputBox' sunny-model='firstName'>
+                            </td>
+                        </tr>
+                        <tr>
+                              <td class='labeltext'>
+                                    <label>Enter SurName</label>
+                              </td>
+                              <td class='inputBox'>
+                                  <input type='text' placeholder='surName'  class = 'inputBox'  sunny-model='surName'>
+                              </td>
+                          </tr>
+                          <tr>
+                                  <td class='labeltext'>
+                                        <label>Enter Address</label>
+                                  </td>
+                                  <td class='inputBox'>
+                                      <input type='address' maxlength = '45' placeholder='address'  class = 'inputBox'  sunny-model='address'>
+                                  </td>
+                              </tr>
+                    </table>
+          </div>
+          <hr/>
+          <label class='textLabel'>Binding strings</label>
+          <div class='outputTableModelCls2'>
+                <table>
+                        <tr>
+                            <td class='labeltext'>
+                                  <label>Name </label>
+                            </td>
+                            <td class='inputBox'>
+                                <span sunny-bind="firstName"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                                <td class='labeltext'>
+                                      <label>SurName</label>
+                                </td>
+                                <td class='inputBox'>
+                                    <span sunny-bind='surName'></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td class='labeltext'>
+                                          <label>Address</label>
+                                    </td>
+                                    <td class='inputBox'>
+                                        <span sunny-bind = 'address' ></span>
+                                    </td>
+                                </tr>
+
+                        
+                    </table>
+          </div>
+          
+      </div>
+            
+        
+    </body>
+</html>
